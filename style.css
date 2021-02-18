@@ -1,3 +1,13 @@
+body {
+  height: 100vh;
+  background: rgb(170, 44, 112);
+  background: linear-gradient(
+    360deg,
+    rgba(170, 44, 112, 1) 25%,
+    rgb(0, 216, 216) 100%
+  );
+}
+
 * {
   box-sizing: border-box;
   font-family: Arial, Helvetica, sans-serif;
@@ -7,10 +17,9 @@
   width: 500px;
   height: 500px;
   display: grid;
-  grid-template-columns: repeat(16, 16fr);
-  grid-template-rows: repeat(16, 16fr);
   grid-auto-rows: auto;
   border: 1px solid black;
+  box-shadow: 0px 0px 8px black;
 }
 
 .div-el {
@@ -18,10 +27,12 @@
   display: inline-block;
   height: auto;
   width: auto;
+  background-color: white;
+  cursor: crosshair;
 }
 
 .main {
-  margin-top: 10%;
+  margin-top: 5%;
   display: grid;
   justify-content: center;
   align-items: center;
@@ -32,19 +43,29 @@
 }
 
 .reset {
+  font-size: 15px;
   justify-self: center;
   margin-bottom: 1.25rem;
   width: 5em;
   height: 5em;
-  border: 1px solid black;
+  border: 2px solid white;
   padding: 10px 10px;
   border-radius: 50%;
-  background-color: rgb(236, 235, 235);
+  background-color: transparent;
+  color: white;
   font-weight: 700;
+  cursor: pointer;
 }
 
 .reset:hover {
-  box-shadow: 0px 0px 10px magenta;
-  border: 1px solid magenta;
+  box-shadow: 0px 0px 30px rgb(0, 255, 255);
+  border: 2px solid rgb(0, 255, 255);
   transition: all 0.25s;
+}
+
+.heading {
+  justify-self: center;
+  color: white;
+  font-size: 2.5rem;
+  text-shadow: 0px 1px 30px white;
 }
